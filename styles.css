@@ -76,14 +76,6 @@ header {
     z-index: 1;
 }
 
-.list {
-    color: var(--white);
-    font-size: 1.2rem;
-    list-style: none;
-    margin-top: 1em;
-    text-align: center;
-}
-
 .title {
     color: var(--white);
     padding-top: var(--mini);
@@ -129,29 +121,31 @@ para que luego de ese tipo de dispositivos se modifique su despliegue */
         display: grid;
         gap: var(--normal);
         grid-template-columns: repeat(2, 1fr);
-
     }
 }
 
 /* boton  */
-button {
+.button {
     background-color: transparent;
     border-radius: 8px;
     border: 1px solid black;
-    box-shadow: 1px 2px 5px black;
     padding: 1em;
+    transition: all 1s ease-in-out;
 }
-button a {
+.button a {
     color: #000;
+    font-weight: 700;
     padding: var(--normal)/2;
     text-decoration: none;
     text-transform: uppercase;
+    transition: all 0.5s ease-out;
 }
-button:hover{
+.button:hover{
     background-color: var(--detail);
     color: var(--detail);
+    box-shadow: 2px 4px 10px black;
 }
-button:hover a {
+.button:hover a {
     color: var(--white);
     font-weight: 700;
     text-shadow: 1px 1px 2px black;
@@ -194,7 +188,86 @@ footer {
     width: 48px;
 }
 
-.menu-icon {
- 
+/* aqui estoy creando las tres barras del menu */
+.menu-icon, 
+.menu-icon::before, 
+.menu-icon::after {
+    background-color: var(--white);
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.5s;
 }
-,menu
+/* esto es para  que efectivamente aparezcan en pantalla */
+.menu-icon::before, .menu-icon::after {
+    content: "";
+}
+/* posicionando  */
+.menu-icon::before {
+    transform: translate(-20px, 12px);
+}
+.menu-icon::before {
+    transform: translate(20px, 12px);
+}
+
+nav {
+    /* display: none; */
+    transform-origin: top center;
+    animation: showMenu 0.5s ease-in-out forwards;
+}
+/* despliegue del menu con rebote */
+@keyframes showMenu {
+    0% {
+        transfrom: ScaleY(0)
+    }
+    80% {
+        transform: scaleY(1.2);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+nav ul {
+    list-style-type:none;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.list {
+    color: var(--white);
+    font-size: 1.2rem;
+    text-align: center;
+    border-top: 1px solid var(--footer);
+    margin-top: 0.8em;
+    text-shadow: 1px 2px 5px black;
+}
+.list a {
+    display: block;
+    margin: 0.8em auto;
+    width: 80%;
+}
+
+.list a:hover, .list a:focus {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+/* barra del medio */
+:is(header:hover, header:focus-within) .menu-icon {
+    background-color: transparent;
+    transform: rotate(360deg);
+}
+
+/* barra superior */
+:is(header:hover, header:focus-within) .menu-icon::before {
+    transform: translateX(-20px) rotate(-45deg);
+}
+/* barra inferior */
+:is(header:hover, header:focus-within) .menu-icon::after {
+    transform: translateX(-20px) rotate(45deg);
+}
+/* visibilidad del nav */
+:is(header:hover, header:focus-within) nav {
+    display: block;
+}
