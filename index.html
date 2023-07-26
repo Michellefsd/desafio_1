@@ -22,15 +22,18 @@
     <!-- agrego fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
+    
     <!-- agrego hoja de estilos  -->
-    <link rel="stylesheet" type="css"  href=""/>
+    <link rel="stylesheet"  href="styles.css"/>
 </head>
 <body>
     <!-- uso el header para superior y el menu -->
     <header>
-        <h1>Hablemos sobre Género y Tecnología</h1>
+        <div class="header"></div>
+        <!-- creo el circulo que esta en la parte superior izquierda de la pagina modelo -->
+        <div class="circle"></div>
+        <h1 class="title">Hablemos sobre Género y Tecnología</h1>
         <!-- respecto al menu he decidido practicar un menu de barras hecho con CSS que aprendi recientemente. -->
         <nav>
             <ul>
@@ -42,19 +45,20 @@
         </nav>
     </header>
     <!-- uso main para colocar el contenido principal -->
-    <main>
-        <article>
+    <main class="container">
+        <article class="principal-content">
             <figure>
-                <img src="" alt="" title="" width="" height="" loading="lazy">
-                <figcaption></figcaption>
+                <img src="img/aimg1.png" alt="dibujo de mujer sentada en su escritorio con su celular en la mano, organizando sus ideas" title="Metas claras: disminuyamos la brecha de género" width="498px" height="314px" loading="lazy">
+                <figcaption class="hidden">"@personasit, @mujeresit @kanban</figcaption>
             </figure>
-            <section>
-                <h2>Información sobre la realidad en la brecha de género en IT</h2>
-                <p>En esta charla presentamos información sobre la realidad, cuál es la presencia femenina en el rubro IT.
+            <section class="text">
+                <!-- uso la etiqueta abbr para mejorar accesibilidad -->
+                <h2>Información sobre la realidad en la brecha de género en <abbr title="Information Technology">IT</abbr></h2>
+                <p>En esta charla presentamos información sobre la realidad, cuál es la presencia femenina en el rubro <abbr title="Information Technology">IT</abbr>.
                 En qué áreas técnicas nos desempeñamos, presentamos la brecha de género visible no sólo en el mercado local sino internacional. <br>
-            Luego, pasamos a hablar de sesgos y el impacto que tienen en la tecnología que construimos, que por supuesto, afecta a la sociedad toda.</p>
+                Luego, pasamos a hablar de sesgos y el impacto que tienen en la tecnología que construimos, que por supuesto, afecta a la sociedad toda.</p>
             </section>
-            <section>
+            <section class="text">
                 <h2>Accionables</h2>
                 <p>Finalmente, dejamos una serie de propuestas, porque entendemos que solamente señalar un problema no construye y 
                     estamos para construir en comunidad <br>
@@ -63,19 +67,19 @@
                 </p>
             </section>
             <figure>
-                <img src="" alt="" title="" width="" height="" loading="lazy">
+                <img src="img/aimg2.png" alt="mujeres trabajando" title="Mujeres en área IT" width="" height="" loading="lazy">
                 <figcaption></figcaption>
             </figure>
         </article>
-        <section>
+        <section class="enroll">
             <h3>Inscribite a las Charlas</h3>
             <p>Las charlas no tienen costo pero sí cupo limitado. Inscríbete Ahora!</p>
-            <button><a href="">Quiero Inscribirme</a></button>
+            <button><a href="https://mujeresit.com/contacto/">Quiero Inscribirme</a></button>
         </section>
     </main>
     <!-- Uso el footer para mostar los derechos de copyright -->
     <footer>
-        &copy; Mujeres IT copyright. Todos los derechos reservados. 
+        <p class="footer"> &copy; Mujeres IT copyright. Todos los derechos reservados. </p>
     </footer>
 </body>
 </html>
