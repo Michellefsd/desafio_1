@@ -1,3 +1,5 @@
+/* use Responsively App para ir trabajando conjuntamentelos distintos tipos de dispositivos y 
+hacer el responsive design */
 
 /* Procuraré que todo mi código esté con sus atributos
 en forma alfabética para que sea mas fácil encontrarlos y detectar duplicados */
@@ -78,7 +80,7 @@ header {
 
 .title {
     color: var(--white);
-    padding-top: var(--mini);
+    padding-top: var(--normal);
     text-align: center;
 }
 
@@ -178,6 +180,11 @@ footer {
 
 /* menu hamburguesa */
 
+.menu-div {
+    position: absolute;
+    right: var(--normal);
+    top: var(--normal);
+}
 .menu-button {
     background-color: transparent;
     border: none;
@@ -193,64 +200,23 @@ footer {
 .menu-icon::before, 
 .menu-icon::after {
     background-color: var(--white);
-    width: 40px;
-    height: 5px;
     border-radius: 5px;
+    height: 5px;
     position: absolute;
     transition: all 0.5s;
+    width: 40px;
 }
 /* esto es para  que efectivamente aparezcan en pantalla */
-.menu-icon::before, .menu-icon::after {
+.menu-icon::before, 
+.menu-icon::after {
     content: "";
 }
 /* posicionando  */
 .menu-icon::before {
+    transform: translate(-20px, -12px);
+}
+.menu-icon::after {
     transform: translate(-20px, 12px);
-}
-.menu-icon::before {
-    transform: translate(20px, 12px);
-}
-
-nav {
-    /* display: none; */
-    transform-origin: top center;
-    animation: showMenu 0.5s ease-in-out forwards;
-}
-/* despliegue del menu con rebote */
-@keyframes showMenu {
-    0% {
-        transfrom: ScaleY(0)
-    }
-    80% {
-        transform: scaleY(1.2);
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}
-
-nav ul {
-    list-style-type:none;
-    display: flex;
-    flex-flow: column nowrap;
-}
-.list {
-    color: var(--white);
-    font-size: 1.2rem;
-    text-align: center;
-    border-top: 1px solid var(--footer);
-    margin-top: 0.8em;
-    text-shadow: 1px 2px 5px black;
-}
-.list a {
-    display: block;
-    margin: 0.8em auto;
-    width: 80%;
-}
-
-.list a:hover, .list a:focus {
-    transform: scale(1.2);
-    transition: all 0.5s;
 }
 
 /* barra del medio */
@@ -270,4 +236,47 @@ nav ul {
 /* visibilidad del nav */
 :is(header:hover, header:focus-within) nav {
     display: block;
+}
+
+
+nav {
+    animation: showMenu 0.5s ease-in-out forwards;
+    display: none;
+    transform-origin: top center;
+}
+/* despliegue del menu con rebote */
+@keyframes showMenu {
+    0% {
+        transform: ScaleY(0)
+    }
+    80% {
+        transform: scaleY(1.2);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style-type:none;
+}
+nav li {
+    border-top: 1px solid var(--footer);
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-top: 0.8em;
+    text-align: center;
+    text-shadow: 1px 2px 5px black;
+}
+nav a {
+    display: block;
+    margin: 0.8em auto;
+    width: 80%;
+}
+
+nav a:hover, nav a:focus {
+    transition: all 0.5s;
+    transform: scale(1.2);
 }
