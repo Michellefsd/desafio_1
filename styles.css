@@ -1,3 +1,17 @@
+/* genero variables para el estilo */
 :root {
-    --bk-primary: 
+    /* me instalo colorzilla para tomar muestra de color de la pagina modelo */
+    --primary: #7862A6;
+    --secondary: #F8CA93;
+    --footer: #544A81;
+    --circle: #FE9192;
 } 
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
