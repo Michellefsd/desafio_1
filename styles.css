@@ -16,7 +16,7 @@ en forma alfabética para que sea mas fácil encontrarlos y detectar duplicados 
     --font: 'Roboto Slab', serif;
     /* medidas */
     --mini: 1.6em;
-    --normal:2.4em;
+    --normal: 2.4em;
 } 
 
 
@@ -44,6 +44,10 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 2;
+}
+img {
+    max-width: 90vw;
+    height: auto;
 }
 
 
@@ -96,6 +100,8 @@ header nav ul li {
     text-align: start;
     margin: var(--mini);
 }
+
+/* separado color amarillo con boton */
 .enroll {
     background-color: var(--secondary);
     border-radius: 5px;
@@ -116,7 +122,9 @@ header nav ul li {
         width: 700px;
     }
 }
-
+main .principal-content {
+    margin: 5em;
+}
 /* uso el media-querie con min-width usando el valor standard + 1
 para que luego de ese tipo de dispositivos se modifique su despliegue */
 @media (min-width: 769px) {
@@ -124,13 +132,18 @@ para que luego de ese tipo de dispositivos se modifique su despliegue */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: var(--normal);
-        margin: var(--normal)*2 var(--normal);
+        
     }
 }
 button a {
     text-decoration: none;
     padding: var(--normal)/2;
     text-transform: uppercase;
+}
+
+figure .hidden {
+    position: absolute;
+    left: -1000px;
 }
 
 
