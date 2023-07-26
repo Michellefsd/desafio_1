@@ -1,11 +1,12 @@
 
-/* Procuraré que todo mi código esté con sus atributos 
+/* Procuraré que todo mi código esté con sus atributos
 en forma alfabética para que sea mas fácil encontrarlos y detectar duplicados */
 
 
 :root {
     /* genero variables para el estilo */
     /* me instalo colorzilla para tomar muestra de color de la pagina modelo */
+    /* despues me di cuenta en inspect de browser ya tenia esa herramienta :) */
     /* color */
     --primary: #7862A6;
     --secondary: #F8CA93;
@@ -13,12 +14,16 @@ en forma alfabética para que sea mas fácil encontrarlos y detectar duplicados 
     --footer: #544A81;
     --detail: #72F6D9;
     --white: #fff;
+
+    /* busco fuente parecida */
     /* fuente */
     --font: 'Roboto Slab', serif;
+
+    /* estandarizo medidas */
     /* medidas */
     --mini: 1.6em;
     --normal: 2.4em;
-} 
+}
 
 
 /* General */
@@ -30,9 +35,6 @@ en forma alfabética para que sea mas fácil encontrarlos y detectar duplicados 
 body{
     font-family: var(--font);
     overflow-x: hidden;
-
-    /* display: flex;
-    flex-direction: column; */
 }
 h2{
     color: #544A81;
@@ -47,8 +49,8 @@ main {
     flex-grow: 2;
 }
 img {
-    max-width: 90vw;
     height: auto;
+    max-width: 90vw;
 }
 
 
@@ -57,10 +59,10 @@ header {
     /* la img violeta fue pasada por tiny.jpg */
     background-image: url(img/violeta.png);
     background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 350px;
     min-width: 100vw;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
     z-index: -1;
 }
@@ -68,47 +70,48 @@ header {
     background-image: url(img/brillos.png);
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
     min-height: 300px;
     min-height: 600px;
+    position: absolute;
     z-index: 1;
-
 }
 
 .list {
-    list-style: none;
-    text-align: center; 
     color: var(--white);
+    font-size: 1.2rem;
+    list-style: none;
+    margin-top: 1em;
+    text-align: center;
 }
 
 .title {
-    text-align: center;
-    padding-top: var(--mini);
     color: var(--white);
+    padding-top: var(--mini);
+    text-align: center;
 }
 
 
 /* Main */
 
 .text {
-    text-align: start;
     margin: var(--mini);
+    text-align: start;
 }
 
 /* separado color amarillo con boton */
 .enroll {
     background-color: var(--secondary);
     border-radius: 5px;
-    padding: 1.6em;
     display: flex;
     flex-direction: column;
     gap: var(--mini);
+    padding: 1.6em;
 }
 @media (min-width: 480px) {
     .enroll {
         border-radius: 5px;
-        padding: var(--mini);
         margin: 0 6em;
+        padding: var(--mini);
     }
 }
 @media (min-width: 769px) {
@@ -124,39 +127,39 @@ para que luego de ese tipo de dispositivos se modifique su despliegue */
 @media (min-width: 769px) {
     .principal-content {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: var(--normal);
-        
+        grid-template-columns: repeat(2, 1fr);
+
     }
 }
 
 /* boton  */
 button {
     background-color: transparent;
-    border: 1px solid black;
     border-radius: 8px;
-    padding: 1em;
+    border: 1px solid black;
     box-shadow: 1px 2px 5px black;
-} 
+    padding: 1em;
+}
 button a {
-    text-decoration: none;
-    padding: var(--normal)/2;
-    text-transform: uppercase;
     color: #000;
+    padding: var(--normal)/2;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 button:hover{
     background-color: var(--detail);
     color: var(--detail);
 }
 button:hover a {
-    font-weight: 700;
     color: var(--white);
+    font-weight: 700;
     text-shadow: 1px 1px 2px black;
 }
 
 figure .hidden {
-    position: absolute;
     left: -1000px;
+    position: absolute;
 }
 
 
@@ -173,7 +176,25 @@ footer {
 }
 @media (min-width: 769px) {
     .footer {
-        text-align: start;
         margin-left: var(--normal);
+        text-align: start;
     }
 }
+
+
+/* menu hamburguesa */
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    position: relative;
+    width: 48px;
+}
+
+.menu-icon {
+ 
+}
+,menu
