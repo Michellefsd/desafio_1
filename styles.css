@@ -97,6 +97,7 @@ header {
     text-align: start;
 }
 
+
 /* separado color amarillo con boton */
 .enroll {
     background-color: var(--secondary);
@@ -149,8 +150,8 @@ para que luego de ese tipo de dispositivos se modifique su despliegue */
 }
 .button:hover{
     background-color: var(--detail);
-    color: var(--detail);
     box-shadow: 2px 4px 10px black;
+    color: var(--detail);
 }
 .button:hover a {
     color: var(--white);
@@ -282,6 +283,6 @@ nav a {
 }
 
 nav a:hover, nav a:focus {
-    transition: all 0.5s;
     transform: scale(1.2);
+    transition: all 0.5s;
 }
