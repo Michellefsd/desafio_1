@@ -9,9 +9,17 @@ en forma alfabética para que sea mas fácil encontrarlos y detectar duplicados 
     /* genero variables para el estilo */
     /* me instalo colorzilla para tomar muestra de color de la pagina modelo */
     /* despues me di cuenta en inspect de browser ya tenia esa herramienta :) */
+
+
     /* color */
     --circle: #FE9192;
-    --detail: #8efae2;
+
+    /* color sacado de brillos */
+    --detail1: #8efae2; 
+
+    /* color sacado de www.nujeresIT */
+    --detail2: #49bcc4;
+
     --footer: #544A81;
     --primary: #7862A6;
     --secondary: #F8CA93;
@@ -155,9 +163,9 @@ para que luego de ese tipo de dispositivos se modifique su despliegue */
     transition: all 0.5s ease-out;
 }
 .button:hover{
-    background-color: var(--detail);
+    background-color: var(--detail1);
     box-shadow: 2px 4px 10px black;
-    color: var(--detail);
+    color: var(--detail1);
 }
 .button:hover a {
     color: var(--white);
