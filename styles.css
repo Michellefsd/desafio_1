@@ -79,7 +79,8 @@ header {
     z-index: 2;
 }
 .brillos-image {
-    clip-path: polygon(0 0, 120% 0, 120% 50%, 80% 90%, 0% 97%);
+    /* clip path sugerido por chatGPT ya que no lograba superponer las imagenes respetando la forma de la violeta */
+    clip-path: polygon(0 0, 120% 0, 120% 50%, 77% 80%, 0% 93%);
     height: 100%;
     left: 0;
     object-fit: cover;
@@ -87,6 +88,11 @@ header {
     top: 0;
     width: 100%;
     z-index: 0;
+}
+@media (min-width: 769px) {
+    .brillos-image {
+        clip-path: polygon(0 0, 120% 0, 120% 50%, 77% 90%, 0% 100%);
+    }
 }
 
 
@@ -248,7 +254,9 @@ footer {
 nav {
     animation: showMenu 0.5s ease-in-out forwards;
     display: none;
+    position: relative;
     transform-origin: top center;
+    z-index: 2;
 }
 /* despliegue del menu con rebote */
 @keyframes showMenu {
