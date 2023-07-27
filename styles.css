@@ -14,7 +14,7 @@ en forma alfabética para que sea mas fácil encontrarlos y detectar duplicados 
     --secondary: #F8CA93;
     --circle: #FE9192;
     --footer: #544A81;
-    --detail: #7dfdfd;
+    --detail: #8efae2;
     --white: #fff;
 
     /* busco fuente parecida */
@@ -66,25 +66,27 @@ header {
     min-height: 350px;
     min-width: 100vw;
     position: relative;
-    z-index: -1;
-}
-.brillos {
-    height: 100%;
-    left: 0;
-    mask-image: url(img/violeta.png);
-    position: absolute;
-    top: 0;
-    width: 100%;
-    flex-shrink: 2;
     z-index: 0;
 }
 
 .title {
     color: var(--white);
-    padding-top: var(--normal);
     text-align: center;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.brillos-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 80% 100%, 0% 100%);
 }
 
 
@@ -223,21 +225,21 @@ footer {
 }
 
 /* barra del medio */
-:is(header:hover, header:focus-within) .menu-icon {
+:is(.menu-button:hover, .menu-button:focus-within) .menu-icon {
     background-color: transparent;
     transform: rotate(360deg);
 }
 
 /* barra superior */
-:is(header:hover, header:focus-within) .menu-icon::before {
+:is(.menu-button:hover, .menu-button:focus-within) .menu-icon::before {
     transform: translateX(-20px) rotate(-45deg);
 }
 /* barra inferior */
-:is(header:hover, header:focus-within) .menu-icon::after {
+:is(.menu-button:hover, .menu-button:focus-within) .menu-icon::after {
     transform: translateX(-20px) rotate(45deg);
 }
 /* visibilidad del nav */
-:is(header:hover, header:focus-within) nav {
+:is(.menu-button:hover, .menu-button:focus-within) nav {
     display: block;
 }
 
