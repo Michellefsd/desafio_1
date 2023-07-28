@@ -197,70 +197,28 @@ footer {
 }
 
 
+
+
+
+
+
+
+
 /* menu hamburguesa */
-.menu-div {
-    position: absolute;
-    right: var(--normal);
-    top: var(--normal);
-}
+
 .menu-button {
-    background-color: transparent;
+    background-color: transparent;;
     border: none;
     display: flex;
     height: 48px;
     justify-content: center;
-    position: relative;
-    width: 48px;
-}
-
-/* aqui estoy creando las tres barras del menu */
-.menu-icon,
-.menu-icon::before,
-.menu-icon::after {
-    background-color: var(--white);
-    border-radius: 5px;
-    height: 5px;
     position: absolute;
-    transition: all 0.5s;
-    width: 40px;
+    top: 66px;
+    right: 66px;
+    width: 48px;
+    z-index: 2;
 }
 
-/* esto es para  que efectivamente aparezcan en pantalla */
-.menu-icon::before,
-.menu-icon::after {
-    content: "";
-}
-/* posicionando  */
-.menu-icon::before {
-    transform: translate(-20px, -12px);
-}
-.menu-icon::after {
-    transform: translate(-20px, 12px);
-}
-/* barra del medio */
-:is(.menu-button:hover, .menu-button:focus-within) .menu-icon {
-    background-color: transparent;
-    transform: rotate(360deg);
-}
-/* barra superior */
-:is(.menu-button:hover, .menu-button:focus-within) .menu-icon::before {
-    transform: translateX(-20px) rotate(-45deg);
-}
-/* barra inferior */
-:is(.menu-button:hover, .menu-button:focus-within) .menu-icon::after {
-    transform: translateX(-20px) rotate(45deg);
-}
-/* visibilidad del nav */
-:is(.menu-button:hover, .menu-button:focus-within) nav {
-  
-    z-index: 2;
-} 
-nav {
-    animation: showMenu 0.5s ease-in-out forwards;
-    display:none;
-    transform-origin: top center;
-    z-index: 2;
-}
 /* despliegue del menu con rebote */
 @keyframes showMenu {
     0% {
@@ -274,25 +232,88 @@ nav {
     }
 }
 
-nav ul {
-    display: flex;
-    flex-flow: column nowrap;
-    list-style-type:none;
+.nav {
+    animation : showMenu 0.5s ease-in-out forwards;
+    display : block;
+    transform-origin: top center;
+    z-index: 1;
 }
 nav li {
     border-top: 1px solid var(--footer);
     color: var(--white);
     font-size: 1.2rem;
-    margin-top: 0.8em;
+    padding-bottom: 0.8rem;
     text-align: center;
     text-shadow: 1px 2px 5px black;
 }
-nav a {
+li a {
     display: block;
     margin: 0.8em auto;
     width: 80%;
+    cursor: pointer;
 }
-nav a:hover, nav a:focus {
+
+.hidden {
+    visibility: hidden;
+}
+.none {
+    display: none;
+}
+
+
+
+
+
+/* estoy pasando a javascript */
+/* nav a:hover, nav a:focus {
     transform: scale(1.2);
     transition: all 0.5s;
+} */
+
+
+/* nav ul {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style-type:none;
+} */
+
+
+
+/* aqui estoy creando las tres barras del menu */
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    background-color: var(--white);
+    border-radius: 5px;
+    height: 5px;
+    position: absolute;
+    transition: all 0.5s;
+    width: 40px;
 }
+
+/* // esto es para  que efectivamente aparezcan en pantalla  */
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+}
+/* // posicionando */
+.menu-icon::before {
+    transform: translate(-20px, -12px);
+}
+.menu-icon::after {
+    transform: translate(-20px, 12px);
+} 
+/* // barra del medio */
+/* :is(.menu-div:hover, .menu-div:focus-within) .menu-icon {
+    background-color: transparent;
+    transform: rotate(360deg);
+} */
+/* // barra superior */
+/* :is(.menu-div:hover, .menu-div:focus-within) .menu-icon::before {
+    transform: translateX(-20px) rotate(-45deg);
+} */
+/* // barra inferior */
+/* :is(.menu-div:hover, .menu-div:focus-within) .menu-icon::after {
+    transform: translateX(-20px) rotate(45deg);
+}  */
