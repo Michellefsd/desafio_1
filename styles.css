@@ -260,25 +260,6 @@ li a {
     display: none;
 }
 
-
-
-
-
-/* estoy pasando a javascript */
-/* nav a:hover, nav a:focus {
-    transform: scale(1.2);
-    transition: all 0.5s;
-} */
-
-
-/* nav ul {
-    display: flex;
-    flex-flow: column nowrap;
-    list-style-type:none;
-} */
-
-
-
 /* aqui estoy creando las tres barras del menu */
 
 .menu-icon,
@@ -304,16 +285,19 @@ li a {
 .menu-icon::after {
     transform: translate(-20px, 12px);
 } 
+
+
+/* lo voy a pasar a javascript */
 /* // barra del medio */
-/* :is(.menu-div:hover, .menu-div:focus-within) .menu-icon {
+:is(.menu-button:hover, .menu-button:focus-within) .menu-icon {
     background-color: transparent;
     transform: rotate(360deg);
-} */
+} 
 /* // barra superior */
-/* :is(.menu-div:hover, .menu-div:focus-within) .menu-icon::before {
+:is(.menu-button:hover, .menu-button:focus-within) .menu-icon::before {
     transform: translateX(-20px) rotate(-45deg);
-} */
+} 
 /* // barra inferior */
-/* :is(.menu-div:hover, .menu-div:focus-within) .menu-icon::after {
+:is(.menu-button:hover, .menu-button:focus-within) .menu-icon::after {
     transform: translateX(-20px) rotate(45deg);
-}  */
+} 
