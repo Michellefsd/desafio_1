@@ -1,4 +1,4 @@
-/* use Responsively App para ir trabajando conjuntamentelos distintos tipos de dispositivos y 
+/* use Responsively App para ir trabajando conjuntamentelos distintos tipos de dispositivos y
 hacer el responsive design */
 
 /* Procuraré que todo mi código esté con sus atributos
@@ -15,7 +15,7 @@ en forma alfabética para que sea mas fácil encontrarlos y detectar duplicados 
     --circle: #FE9192;
 
     /* color sacado de brillos */
-    --detail1: #8efae2; 
+    --detail1: #8efae2;
 
     /* color sacado de www.nujeresIT */
     --detail2: #49bcc4;
@@ -46,6 +46,10 @@ body{
     font-family: var(--font);
     overflow-x: hidden;
 }
+a{
+    text-decoration: none;
+    color: #fff;
+ }
 h2{
     color: #544A81;
 }
@@ -79,12 +83,11 @@ header {
 
 .title {
     color: var(--white);
-    left: 50%; 
+    left: 50%;
     position: absolute;
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
 }
 .brillos-image {
     /* clip path sugerido por chatGPT ya que no lograba superponer las imagenes respetando la forma de la violeta */
@@ -103,14 +106,11 @@ header {
     }
 }
 
-
 /* Main */
-
 .text {
     margin: var(--mini);
     text-align: start;
 }
-
 
 /* separado color amarillo con boton */
 .enroll {
@@ -136,6 +136,7 @@ header {
 main .principal-content {
     margin: 5em;
 }
+
 /* uso el media-querie con min-width usando el valor standard + 1
 para que luego de ese tipo de dispositivos se modifique su despliegue */
 @media (min-width: 769px) {
@@ -179,9 +180,7 @@ figure .hidden {
 }
 
 
-
 /* footer */
-
 footer {
     background-color: var(--footer);
     padding: var(--mini);
@@ -199,7 +198,6 @@ footer {
 
 
 /* menu hamburguesa */
-
 .menu-div {
     position: absolute;
     right: var(--normal);
@@ -216,8 +214,8 @@ footer {
 }
 
 /* aqui estoy creando las tres barras del menu */
-.menu-icon, 
-.menu-icon::before, 
+.menu-icon,
+.menu-icon::before,
 .menu-icon::after {
     background-color: var(--white);
     border-radius: 5px;
@@ -226,8 +224,9 @@ footer {
     transition: all 0.5s;
     width: 40px;
 }
+
 /* esto es para  que efectivamente aparezcan en pantalla */
-.menu-icon::before, 
+.menu-icon::before,
 .menu-icon::after {
     content: "";
 }
@@ -238,13 +237,11 @@ footer {
 .menu-icon::after {
     transform: translate(-20px, 12px);
 }
-
 /* barra del medio */
 :is(.menu-button:hover, .menu-button:focus-within) .menu-icon {
     background-color: transparent;
     transform: rotate(360deg);
 }
-
 /* barra superior */
 :is(.menu-button:hover, .menu-button:focus-within) .menu-icon::before {
     transform: translateX(-20px) rotate(-45deg);
@@ -255,14 +252,12 @@ footer {
 }
 /* visibilidad del nav */
 :is(.menu-button:hover, .menu-button:focus-within) nav {
-    display: block;
-}
-
-
+  
+    z-index: 2;
+} 
 nav {
     animation: showMenu 0.5s ease-in-out forwards;
-    display: none;
-    position: relative;
+    display:none;
     transform-origin: top center;
     z-index: 2;
 }
@@ -297,7 +292,6 @@ nav a {
     margin: 0.8em auto;
     width: 80%;
 }
-
 nav a:hover, nav a:focus {
     transform: scale(1.2);
     transition: all 0.5s;
