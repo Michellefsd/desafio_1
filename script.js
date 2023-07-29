@@ -33,6 +33,8 @@
     // Genero animacion del menu a c/click
     function animateMenu() {
         menuIcon.classList.toggle("moving");
+        // al ser pseudoelementos no existen a la carga del DOM 
+        // hay que esperar a q los lea el browser para luego acceder a ellos
         if(menuBefore && menuAfter) {
             menuBefore.classList.add("moving");
             menuAfter.classList.add("moving");
@@ -51,6 +53,8 @@
             title.classList.remove('none')
             nav.classList.remove('nav');
             nav.classList.add('none');
+        // al ser pseudoelementos no existen a la carga del DOM 
+        // hay que esperar a q los lea el browser para luego acceder a ellos
             if(menuBefore && menuAfter) {
                 menuBefore.classList.remove('moving');
                 menuAfter.classList.remove('moving');

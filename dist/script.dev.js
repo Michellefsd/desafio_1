@@ -29,7 +29,8 @@ function displayNav() {
 
 
 function animateMenu() {
-  menuIcon.classList.toggle("moving");
+  menuIcon.classList.toggle("moving"); // al ser pseudoelementos no existen a la carga del DOM 
+  // hay que esperar a q los lea el browser para luego acceder a ellos
 
   if (menuBefore && menuAfter) {
     menuBefore.classList.add("moving");
@@ -49,7 +50,8 @@ function hideNav() {
     menuIcon.classList.remove('moving');
     title.classList.remove('none');
     nav.classList.remove('nav');
-    nav.classList.add('none');
+    nav.classList.add('none'); // al ser pseudoelementos no existen a la carga del DOM 
+    // hay que esperar a q los lea el browser para luego acceder a ellos
 
     if (menuBefore && menuAfter) {
       menuBefore.classList.remove('moving');
