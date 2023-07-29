@@ -290,17 +290,17 @@ li a {
 } 
 
 
-/* lo voy a pasar a javascript */
+/* lo pase a javascript */
 /* // barra del medio */
 .moving {
     background-color: transparent;
     transform: rotate(360deg);
 } 
 /* // barra superior */
-.before {
+.moving::before {
     transform: translateX(-20px) rotate(-45deg);
 } 
 /* // barra inferior */
-.after {
+.moving::after {
     transform: translateX(-20px) rotate(45deg);
 } 
