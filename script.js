@@ -2,7 +2,7 @@
 
     const btn = document.querySelector('.menu-button');
     const title = document.querySelector('#title');
-    header = document.querySelector('header');
+    const header = document.querySelector('header');
     const nav = document.querySelector('nav');
     const menuIcon = document.querySelector('.menu-icon');
 
