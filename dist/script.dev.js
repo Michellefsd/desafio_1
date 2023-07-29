@@ -3,9 +3,11 @@
 // variables//
 var btn = document.querySelector('.menu-button');
 var title = document.querySelector('#title');
-header = document.querySelector('header');
+var header = document.querySelector('header');
 var nav = document.querySelector('nav');
-var menuIcon = document.querySelector('.menu-icon'); // eventlisteners
+var menuIcon = document.querySelector('#menu-icon');
+var menuBefore = document.querySelector('#menu-icon:before');
+var menuAfter = document.querySelector('#menu-icon:after'); // eventlisteners
 
 nav.classList.add('none');
 btn.addEventListener("click", doEverything);
@@ -25,18 +27,20 @@ function displayNav() {
 
 function animateMenu() {
   menuIcon.classList.toggle("moving");
-  menuIcon.classList.add("before-before");
-  menuIcon.classList.add("after-after");
+  menuBefore.classList.add("moving");
+  menuAfter.classList.add("moving");
 }
 
 function removeText() {
-  title.classList.toggle('none');
+  title.classList.add('hidden');
 } // Y en esta especifico que hacer si uno se aleja del nav
 
 
 function hideNav() {
   if (title.classList.contains('none')) {
     menuIcon.classList.remove('moving');
+    menuBefore.classList.remove('moving');
+    menuAfter.classList.remove('moving');
     title.classList.remove('none');
     nav.classList.remove('nav');
     nav.classList.add('none');
