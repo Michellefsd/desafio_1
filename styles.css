@@ -86,8 +86,14 @@ header {
     left: 50%;
     position: absolute;
     text-align: center;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
+}
+/* para que se vea el titulo mas centrado en dispositivos pequeños */
+@media (max-width: 577px) {
+    .title {
+        top: 30%; 
+    }
 }
 .brillos-image {
     /* clip path sugerido por chatGPT ya que no lograba superponer las imagenes respetando la forma de la violeta */
@@ -218,6 +224,13 @@ footer {
     top: 66px;
     width: 48px;
     z-index: 2;
+}
+/* despues de entregado vi q no estaba tan bonito en formato 375px */
+@media (max-width: 577px ) {
+    .menu-button {
+        right: 36px;
+        top: 36px;
+    }
 }
 
 /* despliegue del menu con rebote */
