@@ -8,11 +8,15 @@ var nav = document.querySelector('nav');
 var menuIcon = document.querySelector('#menu-icon');
 var menuBefore = document.querySelector('#menu-icon:before');
 var menuAfter = document.querySelector('#menu-icon:after'); // eventlisteners
+// aqui agrego display none al navegador
 
-nav.classList.add('none');
-btn.addEventListener("click", doEverything);
+nav.classList.add('none'); // aqui le doy las funcionalidades al boton menu hambuerguesa
+
+btn.addEventListener("click", doEverything); // aqui agrego la funcionalidades al salir el mouse de la seccion header
+
 header.addEventListener("mouseleave", hideNav); // functions
-// Junto en esta funcion todas las distintas cosas que quiero que se hagan al darle click al x
+// Junto en esta funcion todas las distintas cosas que quiero que se hagan 
+// al darle click al menu hamburguesa
 
 function doEverything() {
   displayNav();

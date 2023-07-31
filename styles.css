@@ -1,4 +1,4 @@
-/* use Responsively App para ir trabajando conjuntamentelos distintos tipos de dispositivos y
+/* use Responsively App para ir trabajando conjuntamente los distintos tipos de dispositivos y
 hacer el responsive design */
 
 /* Procuraré que todo mi código esté con sus atributos
@@ -47,8 +47,8 @@ body{
     overflow-x: hidden;
 }
 a{
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
  }
 h2{
     color: #544A81;
@@ -214,8 +214,8 @@ footer {
     height: 48px;
     justify-content: center;
     position: absolute;
-    top: 66px;
     right: 66px;
+    top: 66px;
     width: 48px;
     z-index: 2;
 }
@@ -248,10 +248,10 @@ footer {
     text-shadow: 1px 2px 5px black;
 }
 #nav li a {
+    cursor: pointer;
     display: block;
     margin: 0.8em auto;
     width: 80%;
-    cursor: pointer;
 }
 
 .hidden {

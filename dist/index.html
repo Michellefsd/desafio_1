@@ -30,7 +30,7 @@
 <body>
     <!-- uso el header para la parte superior y el menu -->
     <header>
-        <img id="brillos" src="img/brillos.png" class="brillos-image" alt="">
+        <img id="brillos" src="img/brillos.png" class="brillos-image" alt="conexiones tecnologicas y humanas representadas por figuras geometricas unidas">
         <!-- respecto al menu he decidido practicar un menu de barras hecho con CSS que aprendi recientemente. -->
             <button class="menu-button">
                 <div class="menu-icon" id="menu-icon"></div>
@@ -39,7 +39,7 @@
         <nav id="nav">
             <ul>
                 <!-- Aqui erradicaba el ultimo error que tenia que era que no podia darle click a los botones
-                y pensaba que podria tener que ver con los index pero lo que sucedia es que los nombres 
+                y pensaba que podria tener que ver con los z-index pero lo que sucedia es que los nombres 
                 Home / Equipo / Servicios / Contacto estaban fuera de la etiqueta <a></a>   -->
                 <li class="list"><a href="https://cozy-palmier-47cc21.netlify.app/" target="blank">Home</a></li>
                 <li class="list"><a href="https://cozy-palmier-47cc21.netlify.app/" target="blank">Equipo</a></li>
@@ -54,6 +54,7 @@
             <figure>
                 <!-- imagen pasada por  www.tiny.jpg -->
                 <img src="img/img-2.jpg" alt="dibujo de mujer sentada en su escritorio con su celular en la mano, organizando sus ideas" title="Metas claras: disminuyamos la brecha de género" width="498px" height="314px" loading="lazy">
+                los figcaption tienen la clase hidden para que no esten visibles pero si disponibles, bueno para la accesibilidad
                 <figcaption class="hidden">@personasit, @mujeresit, @kanban</figcaption>
             </figure>
             <section class="text">
