@@ -239,7 +239,7 @@ footer {
     transform-origin: top center;
     z-index: 1;
 }
-nav li {
+#nav li {
     border-top: 1px solid var(--footer);
     color: var(--white);
     font-size: 1.2rem;
@@ -247,13 +247,11 @@ nav li {
     text-align: center;
     text-shadow: 1px 2px 5px black;
 }
-li a {
+#nav li a {
     display: block;
     margin: 0.8em auto;
     width: 80%;
     cursor: pointer;
-    position: relative;
-    z-index: 2;
 }
 
 .hidden {
