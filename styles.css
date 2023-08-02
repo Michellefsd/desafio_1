@@ -163,7 +163,7 @@ para que luego de ese tipo de dispositivos se modifique su despliegue */
 @media (min-width: 480px) {
     .enroll {
         border-radius: 5px;
-        margin: 0 6em;
+        margin: var(--mini) 6em 0;
         padding: var(--mini);
     }
 }
