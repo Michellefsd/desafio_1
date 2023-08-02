@@ -55,7 +55,7 @@ h2{
 .container {
     align-items: center;
     margin: var(--mini);
-    width: 90vw;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,6 +65,10 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 2;
+}
+figure {
+    display: flex;
+    align-items: center;
 }
 img {
     height: auto;
@@ -122,8 +126,11 @@ header {
 }
 
 /* Main */
-.principal-content {
-    margin: 5em 20%;
+
+@media (min-width: 579px) {
+    .principal-content {
+        margin: 5em;
+    }  
 }
 
 
