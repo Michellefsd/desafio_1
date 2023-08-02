@@ -44,7 +44,6 @@ en forma alfabética para que sea mas fácil encontrarlos y detectar duplicados 
 }
 body{
     font-family: var(--font);
-    overflow-x: hidden;
 }
 a{
     color: #fff;
@@ -56,7 +55,12 @@ h2{
 .container {
     align-items: center;
     margin: var(--mini);
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -66,7 +70,11 @@ img {
     height: auto;
     max-width: 90vw;
 }
-
+@media (min-width: 633px) {
+    img {
+        max-width: 43vw;
+    }
+}
 
 /* header */
 header {
@@ -77,6 +85,7 @@ header {
     background-size: cover;
     min-height: 350px;
     min-width: 100vw;
+    overflow-x: hidden;
     position: relative;
     z-index: 0;
 }
@@ -113,17 +122,19 @@ header {
 }
 
 /* Main */
-main .principal-content {
-    margin: 5em;
+.principal-content {
+    margin: 5em 20%;
 }
+
 
 /* uso el media-querie con min-width usando el valor standard + 1
 para que luego de ese tipo de dispositivos se modifique su despliegue */
-@media (min-width: 769px) {
+@media (min-width: 633px) {
     .principal-content {
         display: grid;
         gap: var(--normal);
         grid-template-columns: repeat(2, 1fr);
+        
     }
 }
 
@@ -131,6 +142,7 @@ para que luego de ese tipo de dispositivos se modifique su despliegue */
     margin: var(--mini);
     text-align: start;
 }
+
 
 /* card aparte: amarillos con boton */
 .enroll {
