@@ -68,11 +68,11 @@ main {
 }
 img {
     height: auto;
-    max-width: 90vw;
+    max-width: 100%;
 }
-@media (min-width: 633px) {
-    img {
-        max-width: 43vw;
+@media (min-width: 667px) {
+    .img {
+        max-width: 40vw;
     }
 }
 
@@ -129,7 +129,7 @@ header {
 
 /* uso el media-querie con min-width usando el valor standard + 1
 para que luego de ese tipo de dispositivos se modifique su despliegue */
-@media (min-width: 633px) {
+@media (min-width: 667px) {
     .principal-content {
         display: grid;
         gap: var(--normal);
